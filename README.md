@@ -5,8 +5,11 @@ This an application to Configure Ingenico Devices.
 ### What is this repository for? ###
 
 * Quick summary
-* REPO: https://github.com/web-projects/USB_COM_IDENTIFIER.git
 * Version
+
+# Reference
+- REPO: https://github.com/web-projects/USB_COM_IDENTIFIER.git
+- https://docs.microsoft.com/en-us/windows-hardware/drivers/install/guid-devinterface-comport
 
 ### How do I get set up? ###
 

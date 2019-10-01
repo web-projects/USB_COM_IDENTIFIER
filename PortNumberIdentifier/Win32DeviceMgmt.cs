@@ -7,12 +7,12 @@ namespace PortNumberIdentifier
 {
     class Win32DeviceMgmt
     {
-        private const UInt32 DIGCF_PRESENT = 0x00000002;
+        private const UInt32 DIGCF_PRESENT         = 0x00000002;
         private const UInt32 DIGCF_DEVICEINTERFACE = 0x00000010;
-        private const UInt32 SPDRP_DEVICEDESC = 0x00000000;
-        private const UInt32 DICS_FLAG_GLOBAL = 0x00000001;
-        private const UInt32 DIREG_DEV = 0x00000001;
-        private const UInt32 KEY_QUERY_VALUE = 0x0001;
+        private const UInt32 SPDRP_DEVICEDESC      = 0x00000000;
+        private const UInt32 DICS_FLAG_GLOBAL      = 0x00000001;
+        private const UInt32 DIREG_DEV             = 0x00000001;
+        private const UInt32 KEY_QUERY_VALUE       = 0x0001;
         private const string GUID_DEVINTERFACE_COMPORT = "86E0D1E0-8089-11D0-9CE4-08003E301F73";
  
         [StructLayout(LayoutKind.Sequential)]
@@ -60,8 +60,7 @@ namespace PortNumberIdentifier
         public static List<DeviceInfo> GetAllCOMPorts()
         {
             Guid guidComPorts = new Guid(GUID_DEVINTERFACE_COMPORT);
-            IntPtr hDeviceInfoSet = SetupDiGetClassDevs(
-                ref guidComPorts, 0, IntPtr.Zero, DIGCF_PRESENT | DIGCF_DEVICEINTERFACE);
+            IntPtr hDeviceInfoSet = SetupDiGetClassDevs(ref guidComPorts, 0, IntPtr.Zero, DIGCF_PRESENT | DIGCF_DEVICEINTERFACE);
             if (hDeviceInfoSet == IntPtr.Zero)
             {
                 throw new Exception("Failed to get device information set for the COM ports");
@@ -90,15 +89,15 @@ namespace PortNumberIdentifier
                 }
                 return devices;
             }
-            finally {
+            finally 
+            {
                 SetupDiDestroyDeviceInfoList(hDeviceInfoSet);
             }
         }
  
         private static string GetDeviceName(IntPtr pDevInfoSet, SP_DEVINFO_DATA deviceInfoData)
         {
-            IntPtr hDeviceRegistryKey = SetupDiOpenDevRegKey(pDevInfoSet, ref deviceInfoData,
-                DICS_FLAG_GLOBAL, 0, DIREG_DEV, KEY_QUERY_VALUE);
+            IntPtr hDeviceRegistryKey = SetupDiOpenDevRegKey(pDevInfoSet, ref deviceInfoData, DICS_FLAG_GLOBAL, 0, DIREG_DEV, KEY_QUERY_VALUE);
             if (hDeviceRegistryKey == IntPtr.Zero)
             {
                 throw new Exception("Failed to open a registry key for device-specific configuration information");
