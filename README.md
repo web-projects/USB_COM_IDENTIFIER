@@ -10,6 +10,7 @@ This an application to Configure Ingenico Devices.
 # Reference
 - REPO: https://github.com/web-projects/USB_COM_IDENTIFIER.git
 - https://docs.microsoft.com/en-us/windows-hardware/drivers/install/guid-devinterface-comport
+- https://aticleworld.com/get-com-port-of-usb-serial-device/
 
 ### How do I get set up? ###
 
