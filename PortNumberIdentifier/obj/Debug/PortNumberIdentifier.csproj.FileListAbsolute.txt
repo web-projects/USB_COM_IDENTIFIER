@@ -1,0 +1,7 @@
+C:\Development\CSharp\DEVICES\Ingenico\PortNumberIdentifier\PortNumberIdentifier\bin\Debug\PortNumberIdentifier.exe.config
+C:\Development\CSharp\DEVICES\Ingenico\PortNumberIdentifier\PortNumberIdentifier\bin\Debug\PortNumberIdentifier.exe
+C:\Development\CSharp\DEVICES\Ingenico\PortNumberIdentifier\PortNumberIdentifier\bin\Debug\PortNumberIdentifier.pdb
+C:\Development\CSharp\DEVICES\Ingenico\PortNumberIdentifier\PortNumberIdentifier\obj\Debug\PortNumberIdentifier.csprojAssemblyReference.cache
+C:\Development\CSharp\DEVICES\Ingenico\PortNumberIdentifier\PortNumberIdentifier\obj\Debug\PortNumberIdentifier.csproj.CoreCompileInputs.cache
+C:\Development\CSharp\DEVICES\Ingenico\PortNumberIdentifier\PortNumberIdentifier\obj\Debug\PortNumberIdentifier.exe
+C:\Development\CSharp\DEVICES\Ingenico\PortNumberIdentifier\PortNumberIdentifier\obj\Debug\PortNumberIdentifier.pdb
